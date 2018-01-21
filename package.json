@@ -1,0 +1,16 @@
+{
+  "name": "svgeditor",
+  "version": "0.1.0",
+  "description": "js svg editor",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "javascript",
+    "svg",
+    "paperjs"
+  ],
+  "author": "baoxuan xu",
+  "license": "MIT"
+}
