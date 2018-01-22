@@ -140,9 +140,13 @@ window.onload = function () {
 		if (compoundPath.children) {
 			paths = compoundPath.children;
 		} else {
+			if (!compoundPath.clockwise) {
+				compoundPath.reverse();
+			}
 			paths = [compoundPath];
 		}
 		var solidsHolesMap = getsolidsHolesMap(paths);
+		console.log(compoundPath);
 		var geometry = getExtrusionGeometry(JSON.parse(JSON.stringify(solidsHolesMap)));
 		var material = new THREE.MeshPhongMaterial({ color: 0xdddddd, specular: 0x009900, shininess: 30, flatShading: true })
 		var mesh = new THREE.Mesh(geometry, material);
